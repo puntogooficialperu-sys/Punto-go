@@ -31,7 +31,7 @@ total += item.precio;
 mensaje += "%0ATotal: S/"+total;
 
 window.open(
-"https://wa.me/51999999999?text="+mensaje
+"https://wa.me/901649601?text="+mensaje
 );
 
 }
