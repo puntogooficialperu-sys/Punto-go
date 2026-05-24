@@ -1,51 +1,47 @@
 body{
-margin:0;
+background:#fff7f8;
 padding:20px;
-background:#f7f2ea;
 font-family:Arial;
 }
 
-header{
-background:white;
-padding:20px;
-border-radius:20px;
-text-align:center;
-margin-bottom:20px;
-}
-
 h1{
-color:#222;
-font-size:40px;
-}
-
-.categorias{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:10px;
-margin-bottom:20px;
-}
-
-.categorias div{
-background:#f1dfc4;
-padding:15px;
-border-radius:15px;
 text-align:center;
-font-weight:bold;
+color:#d85c8d;
 }
 
-.card{
+h2{
+color:#c94f7c;
+}
+
+.negocio{
 background:white;
 padding:20px;
-border-radius:20px;
 margin-bottom:20px;
-box-shadow:0 5px 10px rgba(0,0,0,.1);
+border-radius:20px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.categoria{
+background:#ffd6e6;
+padding:12px;
+border-radius:12px;
+text-align:center;
+margin:8px;
 }
 
 button{
-background:#25D366;
-color:white;
-border:none;
-padding:12px;
-border-radius:10px;
 width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#ff77a9;
+color:white;
+font-size:16px;
+}
+
+.producto{
+background:#fff0f5;
+padding:15px;
+margin-top:10px;
+border-radius:15px;
 }
