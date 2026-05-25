@@ -206,40 +206,30 @@ no
 
 let fresaCantidad = 0;
 
-  let mensaje =
-  "Hola quiero " +
-  fresaCantidad +
-  " Fresas con crema";
+function cambiarFresa(valor){
 
-  window.open(
-  "https://wa.me/51901649601?text=" +
-  encodeURIComponent(mensaje)
-  );
+fresaCantidad += valor;
+
+if(fresaCantidad < 0){
+fresaCantidad = 0;
+}
+
+document.getElementById(
+"fresaCantidad"
+).innerText = fresaCantidad;
 
 }
 
-</script>
-
-function enviarTodo(){
-
-
-</script>
-  function enviarTodo(){
+function enviarFresa(){
 
 window.open(
-"https://wa.me/51901649601?text=" +
-
-"Pedido Dulce Majito%0A" +
-
-crepaCantidad + " Crepa Oreo%0A" +
-
-maracuyaCantidad + " Mojito Maracuyá%0A" +
-
-fresaCantidad + " Fresas con crema"
-
+"https://wa.me/51901649601?text=Hola quiero " +
+fresaCantidad +
+" Fresas con crema"
 );
 
 }
+
 </script>
   
 <h2>Máncora Burger</h2>
