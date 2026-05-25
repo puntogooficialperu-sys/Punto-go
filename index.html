@@ -42,6 +42,57 @@ lo<!DOCTYPE html>
   
 <h3>Crepa Oreo</h3>
 <img src="oreo.jpg.png" width="250">
+  <div class="producto">
+
+<img src="Imagen/oreo.jpg.png" width="120">
+
+<h3>Crepa Oreo</h3>
+
+<p>S/12</p>
+
+<button onclick="menosOreo()">-</button>
+
+<span id="cantidadOreo">0</span>
+
+<button onclick="masOreo()">+</button>
+
+<br><br>
+
+<button onclick="pedirOreo()">
+Pedir por WhatsApp
+</button>
+
+</div>
+
+<script>
+
+let cantidadOreo=0;
+
+function masOreo(){
+cantidadOreo++;
+document.getElementById(
+"cantidadOreo"
+).innerText=cantidadOreo;
+}
+
+function menosOreo(){
+if(cantidadOreo>0){
+cantidadOreo--;
+document.getElementById(
+"cantidadOreo"
+).innerText=cantidadOreo;
+}
+}
+
+function pedirOreo(){
+
+window.open(
+"https://wa.me/51901649601?text=Hola quiero "+cantidadOreo+" Crepa Oreo"
+);
+
+}
+
+</script>
 <p>S/12</p>
 <a href="https://wa.me/901649601?text=Hola%20quiero%20la%20Crepa%20Oreo">
 <button>Ver menú</button>
