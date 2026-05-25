@@ -194,34 +194,35 @@ Pedir por WhatsApp
 
 <script>
 
+<script>
+
 let fresaCantidad = 0;
 
 function cambiarFresa(valor){
+  fresaCantidad += valor;
 
-fresaCantidad += valor;
+  if(fresaCantidad < 0){
+    fresaCantidad = 0;
+  }
 
-if(fresaCantidad < 0){
-
-fresaCantidad = 0;
-
-}
-
-document.getElementById(
-"fresaCantidad"
-).innerText = fresaCantidad;
-
+  document.getElementById("fresaCantidad").innerText = fresaCantidad;
 }
 
 function enviarFresa(){
 
-window.open(
-"https://wa.me/51901649601?text=Hola quiero "
-+ fresaCantidad +
-" Fresas con crema"
-);
+  let mensaje =
+  "Hola quiero " +
+  fresaCantidad +
+  " Fresas con crema";
+
+  window.open(
+  "https://wa.me/51901649601?text=" +
+  encodeURIComponent(mensaje)
+  );
 
 }
-<script>
+
+</script>
 
 function enviarTodo(){
 
