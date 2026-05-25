@@ -146,12 +146,53 @@ window.open(
 
 </script>
   
+<img src="fresa.jpg.png" width="180">
+
 <h3>Fresas con crema</h3>
-<img src="fresa.jpg.png" width="250">
+
 <p>S/10</p>
-<a href="https://wa.me/901649601?text=Hola%20quiero%20Fresas%20con%20crema">
-<button>Ver menú</button>
-</a>
+
+<button onclick="cambiarFresa(-1)">➖</button>
+
+<span id="fresaCantidad">0</span>
+
+<button onclick="cambiarFresa(1)">➕</button>
+
+<br><br>
+
+<button onclick="enviarFresa()">
+Pedir por WhatsApp
+</button>
+
+<script>
+
+let fresaCantidad=0;
+
+function cambiarFresa(valor){
+
+fresaCantidad += valor;
+
+if(fresaCantidad<0){
+fresaCantidad=0;
+}
+
+document.getElementById(
+"fresaCantidad"
+).innerText=fresaCantidad;
+
+}
+
+function enviarFresa(){
+
+window.open(
+"https://wa.me/51901649601?text=Hola quiero "
++ fresaCantidad +
+" Fresas con crema"
+);
+
+}
+
+</script>
   
 <h2>Máncora Burger</h2>
 
