@@ -43,7 +43,7 @@ lo<!DOCTYPE html>
 <h3>Crepa Oreo</h3>
 <div>
 
-<img src="oreo.jpg.png" width="180">
+<img src="oreo.jpg.png" width="250">
 
 <h3>Crepa Oreo</h3>
 
@@ -98,12 +98,54 @@ window.open(
 
   
 <h3>Mojito Maracuyá</h3>
-<img src="maracuya.jpg.png" width="250">
-<p>S/10</p>
-<a href="https://wa.me/901649601?text=Hola%20quiero%20el%20Mojito%20Maracuyá">
-<button>Ver menú</button>
-</a>
+<img src="maracuya.jpg.png" width="180">
 
+<h3>Mojito Maracuyá</h3>
+
+<p>S/10</p>
+
+<button onclick="cambiarMaracuya(-1)">➖</button>
+
+<span id="maracuyaCantidad">0</span>
+
+<button onclick="cambiarMaracuya(1)">➕</button>
+
+<br><br>
+
+<button onclick="enviarMaracuya()">
+Pedir por WhatsApp
+</button>
+
+<script>
+
+let maracuyaCantidad=0;
+
+function cambiarMaracuya(valor){
+
+maracuyaCantidad += valor;
+
+if(maracuyaCantidad<0){
+maracuyaCantidad=0;
+}
+
+document.getElementById(
+"maracuyaCantidad"
+).innerText=maracuyaCantidad;
+
+}
+
+function enviarMaracuya(){
+
+window.open(
+"https://wa.me/51901649601?text=Hola quiero "
++ maracuyaCantidad +
+" Mojito Maracuyá"
+);
+
+}
+
+</script>
+  
 <h3>Fresas con crema</h3>
 <img src="fresa.jpg.png" width="250">
 <p>S/10</p>
