@@ -216,18 +216,6 @@ fresaCantidad + " Fresas con crema"
 
 let fresaCantidad = 0;
 
-function cambiarFresa(valor){
-  fresaCantidad += valor;
-
-  if(fresaCantidad < 0){
-    fresaCantidad = 0;
-  }
-
-  document.getElementById("fresaCantidad").innerText = fresaCantidad;
-}
-
-function enviarFresa(){
-
   let mensaje =
   "Hola quiero " +
   fresaCantidad +
