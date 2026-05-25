@@ -146,17 +146,23 @@ window.open(
 
 </script>
   
+<div>
+
 <img src="fresa.jpg.png" width="180">
 
 <h3>Fresas con crema</h3>
 
 <p>S/10</p>
 
-<button onclick="cambiarFresa(-1)">➖</button>
+<button onclick="cambiarFresa(-1)">
+➖
+</button>
 
 <span id="fresaCantidad">0</span>
 
-<button onclick="cambiarFresa(1)">➕</button>
+<button onclick="cambiarFresa(1)">
+➕
+</button>
 
 <br><br>
 
@@ -164,21 +170,25 @@ window.open(
 Pedir por WhatsApp
 </button>
 
+</div>
+
 <script>
 
-let fresaCantidad=0;
+let fresaCantidad = 0;
 
 function cambiarFresa(valor){
 
 fresaCantidad += valor;
 
-if(fresaCantidad<0){
-fresaCantidad=0;
+if(fresaCantidad < 0){
+
+fresaCantidad = 0;
+
 }
 
 document.getElementById(
 "fresaCantidad"
-).innerText=fresaCantidad;
+).innerText = fresaCantidad;
 
 }
 
@@ -193,6 +203,7 @@ window.open(
 }
 
 </script>
+
   
 <h2>Máncora Burger</h2>
 
