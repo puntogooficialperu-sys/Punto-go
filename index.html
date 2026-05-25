@@ -41,8 +41,7 @@ lo<!DOCTYPE html>
  <p>Horario: 9 AM - 9 PM</p>
   
 <h3>Crepa Oreo</h3>
-<img src="oreo.jpg.png" width="250">
-  <div class="producto">
+<div>
 
 <img src="Imagen/oreo.jpg.png" width="120">
 
@@ -50,15 +49,15 @@ lo<!DOCTYPE html>
 
 <p>S/12</p>
 
-<button onclick="menosOreo()">-</button>
+<button onclick="cambiarOreo(-1)">➖</button>
 
-<span id="cantidadOreo">0</span>
+<span id="oreoCantidad">0</span>
 
-<button onclick="masOreo()">+</button>
+<button onclick="cambiarOreo(1)">➕</button>
 
 <br><br>
 
-<button onclick="pedirOreo()">
+<button onclick="enviarOreo()">
 Pedir por WhatsApp
 </button>
 
@@ -66,25 +65,33 @@ Pedir por WhatsApp
 
 <script>
 
-let cantidadOreo=0;
+let oreoCantidad = 0;
 
-function masOreo(){
-cantidadOreo++;
+function cambiarOreo(valor){
+
+oreoCantidad += valor;
+
+if(oreoCantidad < 0){
+oreoCantidad = 0;
+}
+
 document.getElementById(
-"cantidadOreo"
-).innerText=cantidadOreo;
+"oreoCantidad"
+).innerText = oreoCantidad;
+
 }
 
-function menosOreo(){
-if(cantidadOreo>0){
-cantidadOreo--;
-document.getElementById(
-"cantidadOreo"
-).innerText=cantidadOreo;
-}
+function enviarOreo(){
+
+window.open(
+"https://wa.me/51901649601?text=Hola quiero "
++ oreoCantidad +
+" Crepa Oreo"
+);
+
 }
 
-function pedirOreo(){
+</script>
 
 window.open(
 "https://wa.me/51901649601?text=Hola quiero "+cantidadOreo+" Crepa Oreo"
