@@ -140,7 +140,7 @@ document.getElementById(
 
 function enviarMaracuya(){
 
-window.open(
+9.open(
 "https://wa.me/51901649601?text=Hola quiero "
 + maracuyaCantidad +
 " Mojito Maracuyá"
@@ -207,14 +207,22 @@ document.getElementById(
 
 function enviarFresa(){
 
+function enviarTodo(){
+
+let mensaje =
+"Pedido Dulce Majito%0A" +
+
+crepaCantidad + " Crepa Oreo%0A" +
+
+maracuyaCantidad + " Mojito Maracuyá%0A" +
+
+fresaCantidad + " Fresas con crema";
+
 window.open(
-"https://wa.me/51901649601?text=Hola quiero " +
-fresaCantidad +
-" Fresas con crema"
+"https://wa.me/51901649601?text=" + mensaje
 );
 
-}
-  </script>
+  }
 
   
 <h2>Máncora Burger</h2>
